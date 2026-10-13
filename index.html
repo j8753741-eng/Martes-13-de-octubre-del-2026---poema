@@ -1,0 +1,616 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#09070d">
+<meta name="description" content="Un poema de amor para Valeria Petro Villazón. Martes 13 de octubre de 2026.">
+<title>Donde mi deseo te besa 🐈‍⬛❤️‍🔥</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --night: #09070d;
+  --panel: #151019;
+  --gold: #e7c58a;
+  --gold-soft: #bda16e;
+  --rose: #ff8fba;
+  --white: #f9edf4;
+  --muted: #b8a8b8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--white);
+  background:
+    radial-gradient(ellipse at 50% 5%, #382039 0%, transparent 40%),
+    radial-gradient(ellipse at 0% 65%, #261226 0%, transparent 36%),
+    radial-gradient(ellipse at 100% 90%, #24152a 0%, transparent 32%),
+    var(--night);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .35;
+  background-image:
+    radial-gradient(1px 1px at 12% 20%, #ffe5ae 99%, transparent),
+    radial-gradient(2px 2px at 78% 15%, #ffb5d6 99%, transparent),
+    radial-gradient(1px 1px at 34% 72%, #ffffff 99%, transparent),
+    radial-gradient(1px 1px at 89% 61%, #ffe5ae 99%, transparent),
+    radial-gradient(2px 2px at 19% 88%, #ffb5d6 99%, transparent);
+  background-size: 230px 240px;
+}
+
+button {
+  font: inherit;
+}
+
+.page {
+  width: min(100% - 30px, 760px);
+  margin: auto;
+  padding: 35px 0 28px;
+}
+
+/* Cabecera felina */
+
+.topline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.topline::before,
+.topline::after {
+  content: "";
+  height: 1px;
+  width: 34px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+
+.topline::after {
+  transform: rotate(180deg);
+}
+
+.moon-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 225px;
+  margin: 12px 0 5px;
+  overflow: hidden;
+}
+
+.moon {
+  position: absolute;
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  top: 24px;
+  left: calc(50% - 72px);
+  background: radial-gradient(circle at 35% 30%, #fff4dc, #e7c58a 48%, #a77743 100%);
+  box-shadow: 0 0 30px #e7c58a26, 0 0 85px #e7c58a13;
+}
+
+.moon::after {
+  content: "";
+  position: absolute;
+  width: 137px;
+  height: 137px;
+  border-radius: 50%;
+  top: -9px;
+  left: 18px;
+  background: #17101c;
+}
+
+.cat {
+  position: absolute;
+  width: 130px;
+  height: 170px;
+  left: calc(50% - 65px);
+  bottom: 0;
+  z-index: 2;
+  animation: catFloat 4s ease-in-out infinite;
+}
+
+.cat svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 16px #ff8fba21);
+}
+
+.orbit {
+  position: absolute;
+  width: 205px;
+  height: 205px;
+  border: 1px solid #e7c58a28;
+  border-radius: 50%;
+  top: 0;
+  left: calc(50% - 102px);
+}
+
+.orbit::before,
+.orbit::after {
+  content: "✦";
+  position: absolute;
+  color: var(--rose);
+  font-size: 15px;
+}
+
+.orbit::before {
+  top: 29px;
+  right: 13px;
+}
+
+.orbit::after {
+  bottom: 35px;
+  left: 4px;
+  color: var(--gold);
+}
+
+.mini-paw {
+  position: absolute;
+  font-size: 20px;
+  opacity: .65;
+}
+
+.paw-one {
+  top: 38px;
+  left: 9%;
+  transform: rotate(-25deg);
+}
+
+.paw-two {
+  right: 8%;
+  bottom: 45px;
+  transform: rotate(22deg);
+}
+
+.hero-title {
+  margin: 0 auto;
+  max-width: 650px;
+  color: var(--gold);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(31px, 7vw, 54px);
+  line-height: 1.02;
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-align: center;
+  text-wrap: balance;
+  text-shadow: 0 0 25px #e7c58a18;
+}
+
+.hero-subtitle {
+  margin: 18px 0 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.date {
+  display: table;
+  margin: 24px auto 0;
+  padding: 10px 17px;
+  color: #f7d8e7;
+  border: 1px solid #ff8fba47;
+  border-radius: 30px;
+  background: #ff8fba09;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/* Tarjeta del poema */
+
+.poem-card {
+  position: relative;
+  margin: 30px auto 0;
+  padding: clamp(24px, 6vw, 45px);
+  overflow: hidden;
+  border: 1px solid #e7c58a42;
+  border-radius: 5px 42px 5px 42px;
+  background:
+    radial-gradient(ellipse at 100% 0%, #ff8fba0b, transparent 50%),
+    linear-gradient(145deg, #1c1420f2, #100b14f5);
+  box-shadow:
+    0 18px 60px #00000055,
+    inset 0 0 30px #e7c58a05;
+}
+
+.poem-card::before {
+  content: "🐾";
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 24px;
+  opacity: .19;
+  transform: rotate(20deg);
+}
+
+.poem-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--rose), var(--gold), transparent);
+}
+
+.eyebrow {
+  color: var(--gold-soft);
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.dedication {
+  margin: 18px 0 25px;
+  color: var(--rose);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(25px, 5vw, 33px);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.heart-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  margin: 23px 0;
+  color: var(--rose);
+  font-size: 15px;
+}
+
+.heart-divider::before,
+.heart-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, #e7c58a7a);
+}
+
+.heart-divider::after {
+  transform: rotate(180deg);
+}
+
+.poem-text {
+  color: #f4e8ef;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(21px, 4.8vw, 26px);
+  line-height: 1.72;
+  font-weight: 500;
+}
+
+.poem-text p {
+  margin: 0 0 22px;
+}
+
+.poem-text p:last-child {
+  margin-bottom: 0;
+}
+
+.highlight {
+  color: var(--gold);
+}
+
+.passion {
+  color: var(--rose);
+}
+
+.signature {
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid #e7c58a36;
+  text-align: center;
+}
+
+.signature-label {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.signature-name {
+  margin: 12px 0 23px;
+  color: var(--gold);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(20px, 4.5vw, 27px);
+  font-weight: 600;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.signature-name:last-child {
+  margin-bottom: 0;
+}
+
+.signature-name.valeria {
+  color: #ffb1d0;
+}
+
+.final-heart {
+  margin-top: 28px;
+  color: var(--rose);
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: 8px;
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+.footer {
+  padding: 30px 8px 5px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  color: #a998ab;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.footer small {
+  display: block;
+  margin-top: 15px;
+  color: #8d798e;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+/* Huellitas flotantes */
+
+.floating-paw {
+  position: fixed;
+  bottom: -35px;
+  z-index: -1;
+  pointer-events: none;
+  color: #ffb6d21b;
+  font-size: 22px;
+  animation: driftUp 12s linear infinite;
+}
+
+.floating-paw.p1 { left: 8%; animation-delay: 0s; }
+.floating-paw.p2 { left: 81%; animation-delay: 4s; font-size: 17px; }
+.floating-paw.p3 { left: 55%; animation-delay: 8s; font-size: 26px; }
+
+@keyframes driftUp {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: .65; }
+  100% { transform: translateY(-115vh) rotate(35deg); opacity: 0; }
+}
+
+@keyframes catFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+@media (max-width: 420px) {
+  .page {
+    width: min(100% - 22px, 760px);
+    padding-top: 25px;
+  }
+
+  .moon-stage {
+    height: 200px;
+  }
+
+  .moon {
+    width: 125px;
+    height: 125px;
+    left: calc(50% - 62px);
+  }
+
+  .moon::after {
+    width: 118px;
+    height: 118px;
+  }
+
+  .orbit {
+    width: 185px;
+    height: 185px;
+    left: calc(50% - 92px);
+  }
+
+  .poem-card {
+    border-radius: 5px 30px 5px 30px;
+  }
+
+  .topline {
+    letter-spacing: 2px;
+    font-size: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="floating-paw p1" aria-hidden="true">🐾</div>
+<div class="floating-paw p2" aria-hidden="true">🐾</div>
+<div class="floating-paw p3" aria-hidden="true">🐾</div>
+
+<main class="page">
+
+  <div class="topline">Un secreto entre la luna y tú</div>
+
+  <section class="moon-stage" aria-label="Un gatito bajo la luna">
+    <div class="orbit"></div>
+    <div class="moon"></div>
+    <span class="mini-paw paw-one" aria-hidden="true">🐾</span>
+    <span class="mini-paw paw-two" aria-hidden="true">✦</span>
+
+    <div class="cat">
+      <svg viewBox="0 0 130 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Silueta de un gato negro">
+        <defs>
+          <linearGradient id="fur" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#493348"/>
+            <stop offset="55%" stop-color="#211724"/>
+            <stop offset="100%" stop-color="#0b080f"/>
+          </linearGradient>
+          <linearGradient id="eye" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fff0b0"/>
+            <stop offset="100%" stop-color="#e7a7d0"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Orejas y cabeza -->
+        <path d="M31 63 L24 19 L53 41 Q65 35 77 41 L106 19 L100 66
+                 Q113 79 106 99 Q97 119 65 119 Q32 119 24 98 Q17 79 31 63Z"
+              fill="url(#fur)" stroke="#8e668b" stroke-width="1.1"/>
+
+        <path d="M31 32 L47 48 L34 62Z" fill="#b97b9f" opacity=".8"/>
+        <path d="M98 32 L83 48 L95 62Z" fill="#b97b9f" opacity=".8"/>
+
+        <!-- Ojos felinos -->
+        <path d="M36 76 Q46 64 57 76 Q47 88 36 76Z" fill="url(#eye)"/>
+        <path d="M73 76 Q84 64 94 76 Q83 88 73 76Z" fill="url(#eye)"/>
+        <ellipse cx="47" cy="76" rx="2.1" ry="6" fill="#17101c"/>
+        <ellipse cx="83" cy="76" rx="2.1" ry="6" fill="#17101c"/>
+
+        <!-- Nariz y bigotes -->
+        <path d="M61 89 Q65 85 69 89 L65 93Z" fill="#ff9ec7"/>
+        <path d="M64 93 Q60 99 55 96 M66 93 Q70 99 75 96"
+              fill="none" stroke="#b98ba9" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M39 91 L12 86 M40 97 L14 101 M91 91 L117 86 M90 97 L116 101"
+              fill="none" stroke="#b98ba9" stroke-width="1" stroke-linecap="round"/>
+
+        <!-- Cuerpo -->
+        <path d="M39 112 Q20 126 26 151 Q30 165 48 160
+                 Q65 154 80 161 Q105 169 108 148
+                 Q111 128 90 113 Q65 128 39 112Z"
+              fill="url(#fur)" stroke="#694c6c" stroke-width="1"/>
+
+        <!-- Cola -->
+        <path d="M94 139 Q121 139 116 117 Q112 102 124 98"
+              fill="none" stroke="#352438" stroke-width="10" stroke-linecap="round"/>
+        <path d="M94 139 Q121 139 116 117 Q112 102 124 98"
+              fill="none" stroke="#91678a" stroke-width="1.2" stroke-linecap="round"/>
+
+        <!-- Corazón en el pecho -->
+        <path d="M65 137
+                 C60 130 49 133 52 141
+                 C54 146 65 153 65 153
+                 C65 153 76 146 78 141
+                 C81 133 70 130 65 137Z"
+              fill="#ff8fba" opacity=".9"/>
+      </svg>
+    </div>
+  </section>
+
+  <h1 class="hero-title">
+    DONDE MI DESEO<br>
+    TE BESA ANTES DE QUE<br>
+    ABRAS LOS OJITOS
+  </h1>
+
+  <p class="hero-subtitle">Un poema escrito con todo mi amor</p>
+
+  <div class="date">Martes, 13 de octubre de 2026 ☀️🐈❤️‍🔥</div>
+
+  <article class="poem-card">
+    <div class="eyebrow">Para la dueña de mis besos</div>
+
+    <h2 class="dedication">
+      Mi Divina Debilidad de Besos Infinitos, 💋❤️‍🔥
+    </h2>
+
+    <div class="heart-divider">♡</div>
+
+    <div class="poem-text">
+      <p>
+        Dejé mis ganas de besarte despiertas antes que el sol,
+        imaginando tus labios encontrándose con los míos y mis brazos
+        convirtiéndose en tu lugar favorito del mundo. Si pudiera elegir
+        dónde comenzar cada mañana, elegiría tu boca; y si pudiera decidir
+        dónde terminar todos mis días, sería perdido entre tus abrazos,
+        <span class="highlight">amándote sin medida.</span>
+      </p>
+
+      <p>
+        Este poema te espera desde tempranito, mi niña preciosa, pero
+        puedes leerlo cuando quieras: mis ganas de ti no conocen horarios,
+        mi corazón no sabe dejar de elegirte y mi alma sigue deseando el
+        privilegio de
+        <span class="passion">hacerte temblar de amor con un solo beso.</span>
+        ❤️‍🔥🐈‍⬛💋
+      </p>
+    </div>
+
+    <div class="signature">
+      <div class="signature-label">Con todo mi amor</div>
+
+      <p class="signature-name">
+        JUAN KALETH MENDOZA PRIMERA •<br>
+        TU AMOR
+      </p>
+
+      <div class="heart-divider">♥</div>
+
+      <div class="signature-label">Mi princesa, mi vida entera</div>
+
+      <p class="signature-name valeria">
+        VALERIA PETRO VILLAZÓN •<br>
+        MA BELLE VIE, MA PRINCESSE,<br>
+        MA JOLIE FILLE ET MON AMOUR
+      </p>
+    </div>
+
+    <div class="final-heart" aria-hidden="true">♡ ♥ ♡</div>
+  </article>
+
+  <footer class="footer">
+    <p>
+      «Si mis besos pudieran convertirse en luz,<br>
+      cada mañana despertarías rodeada de mi amor».
+    </p>
+    <small>UNA HUELLA MÍA · UN BESO PARA TI · SIEMPRE NOSOTROS</small>
+  </footer>
+
+</main>
+</body>
+</html>
